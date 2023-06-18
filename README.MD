@@ -1,1 +1,1 @@
-# This is a Git practice
+# This is a only practice
