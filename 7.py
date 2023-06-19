@@ -5,26 +5,22 @@
 
 import requests
 
-def save_pokemon_data(pokemon_id):
-    url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_id}"
-    response = requests.get(url)
-    data = response.json()
+pokemon_ids = [1, 2, 3, 4, 5, 6]
 
-    name = data["name"]
-    height = data["height"]
-    weight = data["weight"]
-
-    with open("pokemon.txt", "a") as file:
-        file.write(f"Name: {name}\n")
-        file.write(f"Height: {height}\n")
-        file.write(f"Weight: {weight}\n")
-        file.write("\n")
-
-def main():
-    pokemon_ids = [1, 2, 3, 4, 5, 6]
-
+with open('pokemon.txt', 'w') as file:
     for pokemon_id in pokemon_ids:
-        save_pokemon_data(pokemon_id)
+        url = f'https://pokeapi.co/api/v2/pokemon/{pokemon_id}'
+        response = requests.get(url)
 
-if __name__ == "__main__":
-    main()
+        if response.status_code == 200:
+            pokemon_data = response.json()
+            pokemon_name = pokemon_data['name']
+            pokemon_height = pokemon_data['height']
+            pokemon_weight = pokemon_data['weight']
+
+            file.write(f"Name: {pokemon_name}\n")
+            file.write(f"Height: {pokemon_height}\n")
+            file.write(f"Weight: {pokemon_weight}\n")
+            file.write('\n')  # Add a newline between each Pokémon's data
+
+print("Pokémon data has been saved to 'pokemon.txt'")
