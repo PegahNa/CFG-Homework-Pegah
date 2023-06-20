@@ -1,1 +1,1 @@
-# This is a only practice
+# This is only practice
