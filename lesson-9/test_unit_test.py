@@ -1,7 +1,7 @@
 from unittest import mock
 from unittest import TestCase, main
 from .instructor_unit_test_examples import red_or_blue
-#from .instructor_unit_test_examples import average_exam_score
+from .instructor_unit_test_examples import average_exam_score
 
 
 
@@ -22,7 +22,7 @@ class TestRedOrBlueFunction(TestCase):
         result = red_or_blue(num=12)
         self.assertEqual(expected, result)
 
-#
+# #
 # class TestAverageExamScore(TestCase):
 #
 #     def test_calculate_average(self):
