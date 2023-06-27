@@ -1,15 +1,25 @@
+
 flights = [
-    {
-        'flight_id': 1,
-        'from_city': 'London',
-        'to_city': 'New York'
-    }, {
-        'flight_id': 2,
-        'from_city': 'New York',
-        'to_city': 'London'
-    }, {
-        'flight_id': 3,
-        'from_city': 'Bristol',
-        'to_city': 'Cardiff'
-    }
+    {"from_city": "London",
+     "to_city": "Helsinki",
+     "days": [1, 3, 5, 7],
+     "captain": {'name': 'Neil',
+                 'surname': 'Bonn'},
+     "duration_min": 92,
+     "capacity": 100,
+     "booked": 10,
+     "available": 90,
+     "flight_id": 555},
+
+    {"from_city": "Manchester",
+     "to_city": "Oslo",
+     "days": [2, 4],
+     "captain": {'name': 'Jorgen',
+                 'surname': 'Kopff'},
+     "duration_min": 55,
+     "capacity": 80,
+     "booked": 62,
+     "available":  18,
+     "flight_id": 1818},
 ]
+
