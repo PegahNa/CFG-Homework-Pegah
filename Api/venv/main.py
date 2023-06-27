@@ -1,5 +1,5 @@
 from flask import Flask
-
+from data.flight_data import flights
 app = Flask(__name__)
 # -------------------------
 
@@ -11,7 +11,7 @@ def hello():
 
 @app.route('/flights')
 def get_flights():
-    return 'Not Implemented'
+    return flights
 
 # -------------------------
 # I wonder how this works, maybe I should youtube this later.
