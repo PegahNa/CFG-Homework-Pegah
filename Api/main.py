@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
-from data.flights_data import flights
-from utils.utils import search_flight, get_index
+from Api.data.flights_data import flights
+from Api.utils.utils import search_flight, get_index
 
 app = Flask(__name__)
 
