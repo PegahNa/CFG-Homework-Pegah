@@ -7,7 +7,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return {'hello': 'Universe'}
+    return 'This is our Flight API'
+
+@app.route('/flights')
+def get_flights():
+    return 'Not Implemented'
 
 # -------------------------
 # I wonder how this works, maybe I should youtube this later.
