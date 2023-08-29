@@ -44,3 +44,24 @@ for k, v in result.items():
 print(result)
 
 
+# sorted overlapping intervals
+
+intervals = [(3, 5), (1, 2), (6, 8), (4, 7)]
+
+# Sort intervals based on start values
+sorted_intervals = sorted(intervals, key=lambda x: x[0])
+
+merged_intervals = []
+for interval in sorted_intervals:
+    if not merged_intervals or interval[0] > merged_intervals[-1][1]:
+        # If no overlap, or the current interval starts after the previous ends
+        merged_intervals.append(interval)
+    else:
+        # If there is overlap, merge the current interval with the previous one
+        merged_intervals[-1] = (merged_intervals[-1][0], max(merged_intervals[-1][1], interval[1]))
+
+print(merged_intervals)
+
+
+
+
