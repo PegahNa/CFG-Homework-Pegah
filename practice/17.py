@@ -35,11 +35,12 @@ by 5.
 # A
 my_list = [('a', 1), ('b', 2)]
 result = dict(my_list)
+print(result)
 
 
 # B
 for k, v in result.items():
-   result[k] = v * 5
+    result[k] = v * 5
 
 print(result)
 
